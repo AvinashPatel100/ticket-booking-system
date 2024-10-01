@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Management System - Admin Panel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Admin Panel Sidebar -->
+  <div class="admin-panel">
+    <div class="sidebar">
+      <h2>Admin Panel</h2>
+      <ul>
+        <li><a href="#" class="active">Dashboard</a></li>
+        <li><a href="#" id="allTicketsBtn" onclick="showAllTickets()">All Tickets</a></li>
+        <li><a href="#" id="openTicketsBtn" onclick="showOpenTickets()">Open Tickets</a></li>
+        <li><a href="#" id="closedTicketsBtn" onclick="showClosedTickets()">Closed Tickets</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <header>
+        <h1>Ticket Dashboard</h1>
+        <div class="stats">
+          <div class="stat-box">
+            <p>Total Tickets</p>
+            <h3 id="totalTickets">0</h3>
+          </div>
+          <div class="stat-box">
+            <p>Open Tickets</p>
+            <h3 id="openTickets">0</h3>
+          </div>
+          <div class="stat-box">
+            <p>Closed Tickets</p>
+            <h3 id="closedTickets">0</h3>
+          </div>
+        </div>
+      </header>
+
+      <!-- Ticket Form -->
+      <section class="ticket-form">
+        <h2>Add New Ticket</h2>
+        <form id="ticketForm">
+          <input type="text" id="title" placeholder="Ticket Title" required />
+          <textarea id="description" placeholder="Ticket Description"></textarea>
+          <select id="priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+          <button type="submit">Add Ticket</button>
+        </form>
+      </section>
+
+      <!-- Ticket List -->
+      <section class="ticket-list">
+        <h2 id="ticketListHeading">All Tickets</h2>
+        <div id="ticketList"></div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Footer with "Designed by Guidestack" -->
+  <footer>
+    <p>Designed by <strong>Guidestack</strong></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
